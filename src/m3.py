@@ -6,13 +6,13 @@ does not do the right thing.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Valerie Galluzzi, Mark Hays, Amanda Stouder, Aaron Wilkin,
-         their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues, and Brett Tuttle.
+"""  # DOEN: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 ###############################################################################
 #
-# TODO: 2. READ these instructions, ASKING QUESTIONS as needed.
+# DONE: 2. READ these instructions, ASKING QUESTIONS as needed.
 #
 #   This module contains "broken" functions, as in m1 and m2.
 #   FOLLOW THE SAME STEPS as in the instructions of m1.py
@@ -42,7 +42,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 
 def main():
     """ Calls the   TEST   functions in this module. """
-
+    run_test_broken_1()
 
 ###############################################################################
 # Students:
@@ -83,6 +83,8 @@ def run_test_broken_1():
     print('Testing the   broken_1   function:')
     print('--------------------------------------------------')
 
+    print(broken_1(3))
+
     expected = 3
     actual = broken_1(3)  # Test 1 of broken_1
     print('Expected:', expected)
@@ -122,12 +124,15 @@ def broken_1(m):
     #    **  For full credit you must appropriately
     #    **  use (call) the   is_prime   function that is DEFINED ABOVE.
     count = 0
-    for k in range(2 * m):
-        if is_prime(m):
+    for k in range(m, (2 * m) + 2):
+
+        if is_prime(k):
             count = count + 1
+
+    return count
 
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
-    main()
+main()
